@@ -20,10 +20,11 @@ The vertical columns (Groups) of the periodic table are redefined as "geodesics"
 2.2. Redefining Periods as Contours
 The horizontal rows (Periods) represent "contours" on the manifold. Elements in the same period share a specific threshold of deviation from Omega, orbiting the attractor at an equivalent potential level within their respective geodesics.
 3. Mathematical Formalization: The S2N2 Tensor
-3.1. The Limit of Linear Projection and the Alternation Effect
-When deriving bond angles from the physical property space (Electronegativity, Ionization Energy, Atomic Radius), applying a simple linear projection results in a deviation (ID) of approximately 1.1 degrees from actual observed values. Traditionally, this error has been dismissed as random thermal noise. However, within the framework of ID Theory, this 1.1-degree deviation is not noise; it is a "structural deviation" (Alternation Effect) specific to even-numbered periods (e.g., Period 4 and Period 6), caused by the poor shielding of inner-shell electrons (d- and f-orbitals).
-3.2. Curvature Correction via the S2N2 Tensor
-To integrate this quantum mechanical inner-shell distortion into the manifold model, we introduce the "2nd-order geometric tensor" (S2N2 Tensor). By expanding the observable 3D vectors (EN, IE, R) to include 2nd-order interaction terms (EN^2, EN*R, etc.), the S2N2 Tensor completely geometrically absorbs and corrects the structural ID of inner-shell electrons—which slips through 1st-order projections—as "local curvature" on the manifold.
+3.1. The Limit of Linear Projection and the Odd-Even Energy Alternation
+When deriving bond angles from the physical property space, applying a simple linear projection results in an apparent deviation of approximately 1.1 degrees from observed values. Traditionally, this has been dismissed as random thermal noise or a fitting error. However, within the framework of ID Theory, this 1.1-degree difference is not an "error" at all.
+It is the direct geometric manifestation of the fundamental Odd-Even Energy Alternation inherent in atomic structures. Linear models fail because they forcefully draw a straight line through discrete quantum states, ignoring the intrinsic energy gaps (parity differences) between odd and even atomic configurations.
+3.2. Mapping Parity via the S2N2 Tensor
+To integrate this fundamental energetic parity into the manifold model, we introduce the 2nd-order geometric tensor (S2N2 Tensor). The S2N2 Tensor does not "correct" the 1.1-degree difference as a mistake. Instead, by expanding the observable 3D vectors into a quadratic space, it naturally maps the odd-even energetic staggering as intrinsic "local curvature" on the manifold. The discrete energy jumps of atomic parity are geometrically absorbed into the smooth, deterministic topology of the ID Funnel.
 3.3. Height as Hybridization State (S)
 The "height" (Z-axis) on this tensor manifold is defined as the orbital s-character (S). The rim represents highly deviated, intensely hybridized states (sp3, S ≈ 0.25), while the basin represents relaxed states of pure p-orbitals (S ≈ 0).
 3.4. The Geometric Transformation Filter
