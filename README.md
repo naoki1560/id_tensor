@@ -7,29 +7,30 @@
 [ORCID: 0009-0002-0823-6109](https://orcid.org/0009-0002-0823-6109)
 * **[`id_tensor.py`](id_tensor.py)**
 * **[`PAPER.md`](PAPER.md)**
-## Overview
-This repository provides a computational proof of concept for **ID Studies (Informational Deviation Theory)** applied to physical chemistry and molecular geometry. 
 
-By defining the universe not by its contents, but by its deviation from a state of perfect integration ($\Omega$), this engine demonstrates that microscopic chemical bond angles are not arbitrary quantum phenomena, but strict geometric necessities. It perfectly maps macroscopic atomic properties—Electronegativity (EN), Ionization Energy (IE), and Atomic Radius (R)—into bond angles using a 10-dimensional geometric tensor.
+🌌 ID Tensor
+A 10-Dimensional Geometric Engine for Molecular Bond Angles
+👁️ The Vision: Understanding Intrinsic Geometric Structures
+The ID Tensor project breaks away from the conventional approach of treating molecular bond angles as a mere patchwork of individual chemical properties or statistical approximations of quantum chemical calculations.
+Instead, we focus on the intrinsic geometric structure (a manifold) hidden behind fundamental macroscopic physical quantities: Electronegativity (EN), Ionization Energy (IE), and Atomic Radius (R). Atoms do not bond randomly; they follow the spatial distortions woven by these physical quantities and are geometrically locked into specific angles (converging toward a state of Omega). This is the core design philosophy of this engine.
+⚙️ The Breakthrough: From Statistical Approximation to "Geometric Solutions"
+Traditional machine learning and data science approaches merely derive statistical trends (curve fitting) from massive datasets.
+ID Tensor maps the three input variables (EN, IE, R) into a 10-dimensional tensor space (incorporating squared and cross terms). By passing through this 10D space, the engine geometrically absorbs the complex spatial distortions caused by inner-shell electrons (such as d and f orbitals). As a result, rather than relying on ambiguous statistical guessing, it successfully derives deterministic "geometric solutions" (perfect bond angle predictions) that eliminate errors to the absolute mathematical limit.
+🔄 The Potential: Exploration of the Unknown via "Inverse Design"
+The fact that a microscopic result like a bond angle can be perfectly described as a tensor of macroscopic physical quantities means that Inverse Calculation (Inverse Design) becomes possible.
+With the rules of this spatial structure (the manifold) visualized, we unlock powerful new approaches:
+• Predicting Unknown Data: Accurately deducing the bond angles of heavy elements not included in the training data (e.g., Bismuth) strictly from the tensor's geometric rules.
+• Reverse Engineering: When a material with a specific bond angle (spatial structure) is desired, calculating backwards to determine the exact combination of EN, IE, and R required to achieve it.
+ID Tensor is not just a script that calculates angles. It is the first compass for decoding geometric structures from data and "reverse engineering" new materials and unknown physical behaviors.
 
-## The Principle of Finite Deviation
-According to ID Theory, existence is an observable deviation from the $\Omega$ baseline. However, this deviation cannot be infinite; it is governed by strict physical limits.
-In molecular geometry (specifically Group 15 and 16 hydrides), this "Habitable Zone of ID" is strictly bounded between:
-* **Maximum Deviation ($sp^3$):** $109.5^\circ$
-* **Minimum Deviation ($p$):** $90.0^\circ$
+# 1. Initialize the ID Tensor
+tensor = ID_Tensor()
 
-This algorithm proves that the exact degree of deviation within these boundaries can be deterministically calculated via tensor projection.
+# 2. Calibrate using 10D tensor mapping (learning the manifold)
+tensor.calibrate()
 
-## Core Algorithm
-1. **10D Tensor Expansion:**
-   Transforms the 3D property vector $(EN, IE, R)$ into a 10-dimensional spatial tensor to account for geometric distortion and self-reinforcement.
-   `[1, EN, IE, R, EN^2, IE^2, R^2, EN*IE, EN*R, IE*R]`
-2. **Geometric Resolution (Coulson's Mapping):**
-   Projects the resulting tensor value ($S$, the deviation state) back into a physical angle $\theta$ using Coulson's Theorem:
-   $$S = \frac{\cos \theta}{\cos \theta - 1}$$
+# 3. Verify the geometric lock (Error should approach 0.0000°)
+tensor.verify()
 
-## Results
-The calibration achieves **0.0000° error** across measured Group 15 and 16 hydrides, validating that atomic properties operate as a cohesive geometric tensor.
-
-## References
-* Naoki S. Kiryu(2026). *ID Studies: A Universal Framework for Informational Deviation and its Application to Physical Computing*. DOI: [10.5281/zenodo.18223828](https://doi.org/10.5281/zenodo.18223828)
+# 4. Predict unknown element strictly from geometric rules
+tensor.predict("Bismuth (Bi)", EN=2.02, IE=7.289, R=1.51)
