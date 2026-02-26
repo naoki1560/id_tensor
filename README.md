@@ -8,29 +8,76 @@
 * **[`id_tensor.py`](id_tensor.py)**
 * **[`PAPER.md`](PAPER.md)**
 
-🌌 ID Tensor
-A 10-Dimensional Geometric Engine for Molecular Bond Angles
-👁️ The Vision: Understanding Intrinsic Geometric Structures
-The ID Tensor project breaks away from the conventional approach of treating molecular bond angles as a mere patchwork of individual chemical properties or statistical approximations of quantum chemical calculations.
-Instead, we focus on the intrinsic geometric structure (a manifold) hidden behind fundamental macroscopic physical quantities: Electronegativity (EN), Ionization Energy (IE), and Atomic Radius (R). Atoms do not bond randomly; they follow the spatial distortions woven by these physical quantities and are geometrically locked into specific angles (converging toward a state of Omega). This is the core design philosophy of this engine.
-⚙️ The Breakthrough: From Statistical Approximation to "Geometric Solutions"
-Traditional machine learning and data science approaches merely derive statistical trends (curve fitting) from massive datasets.
-ID Tensor maps the three input variables (EN, IE, R) into a 10-dimensional tensor space (incorporating squared and cross terms). By passing through this 10D space, the engine geometrically absorbs the complex spatial distortions caused by inner-shell electrons (such as d and f orbitals). As a result, rather than relying on ambiguous statistical guessing, it successfully derives deterministic "geometric solutions" (perfect bond angle predictions) that eliminate errors to the absolute mathematical limit.
-🔄 The Potential: Exploration of the Unknown via "Inverse Design"
-The fact that a microscopic result like a bond angle can be perfectly described as a tensor of macroscopic physical quantities means that Inverse Calculation (Inverse Design) becomes possible.
-With the rules of this spatial structure (the manifold) visualized, we unlock powerful new approaches:
-• Predicting Unknown Data: Accurately deducing the bond angles of heavy elements not included in the training data (e.g., Bismuth) strictly from the tensor's geometric rules.
-• Reverse Engineering: When a material with a specific bond angle (spatial structure) is desired, calculating backwards to determine the exact combination of EN, IE, and R required to achieve it.
-ID Tensor is not just a script that calculates angles. It is the first compass for decoding geometric structures from data and "reverse engineering" new materials and unknown physical behaviors.
 
-# 1. Initialize the ID Tensor
-tensor = ID_Tensor()
+# 原子特性の幾何学的解釈と結合角の解析
+# Geometric Interpretation of Atomic Periodicity and Bond Angle Analysis
 
-# 2. Calibrate using 10D tensor mapping (learning the manifold)
-tensor.calibrate()
+## 概要 / Concept
 
-# 3. Verify the geometric lock (Error should approach 0.0000°)
-tensor.verify()
+### (JP)
+本プロジェクトは、従来の周期表という平面的な枠組みを、エネルギー（s性）を標高とした3次元の**「ポテンシャル曲面」**として再定義します。この幾何学的な視点により、元素の性質を以下の三要素で解釈します。
 
-# 4. Predict unknown element strictly from geometric rules
-tensor.predict("Bismuth (Bi)", EN=2.02, IE=7.289, R=1.51)
+* **形状：深淵へと向かう「ポテンシャル・ファンネル」**
+  窒素(N)や酸素(O)などの第2周期元素を「高エネルギーの縁（リム）」に配置し、そこからエネルギーが緩和していく立体的なくぼみを想定します。
+
+* **測地線と等高線**
+  * **族（縦の列）：** 頂上から底へと向かう「測地線（最短ルート）」。
+  * **周期（横の列）：** 同じエネルギーレベルを示す「等高線」。
+
+* **90°の幾何学的特異点**
+  第5・第6周期の重原子が到達する、軌道混成を失った状態を「すり鉢の底」として定義します。ここでは分子は宇宙の基本座標系である「純粋な直交空間（90°）」へと収束します。
+
+### (EN)
+This project redefines the traditional 2D periodic table as a 3D **"Potential Surface (Manifold)"** where energy levels (s-character) are treated as elevation. This geometric perspective interprets elemental properties through three key elements:
+
+* **Shape: The "Potential Funnel" Toward the Abyss**
+  Elements from Period 2 (such as N and O) are positioned at the "High-Energy Rim," descending into a 3D potential well where informational and energetic deviation is relaxed.
+
+* **Geodesics and Contours**
+  * **Groups (Vertical):** Defined as **"Geodesics"**—the paths of least resistance from the rim to the center.
+  * **Periods (Horizontal):** Defined as **"Contours"**—equipotential lines representing specific energy thresholds.
+
+* **The 90° Geometric Singularity**
+  The basin of the funnel represents the state reached by heavy atoms in Periods 5 and 6. At this stability point, hybridization is lost, and the molecular structure converges into a **"Pure Orthogonal Space (90°)"** synchronized with the universe's fundamental Cartesian coordinate system.
+
+---
+
+## 目的 / Objectives
+
+### (JP)
+1. **幾何学的配置からの結合角算出：** 統計的手法を用いて、原子の幾何学的性質から決定論的に結合角を導き出します。
+2. **逆計算による特性解析：** 得られた結合角から、未知の分子構造や化学的特性の解析に繋げます。
+3. **誤差の吸収：** 従来の計算手法では「ノイズ」とされていた微細な数値の揺らぎを、空間の局所的な曲率として解釈し、極めて高い精度での幾何学的プロジェクションを達成します。
+
+### (EN)
+1. **Deterministic Bond Angle Calculation:** Using statistical and geometric methods to derive bond angles directly from atomic properties.
+2. **Inverse Structural Analysis:** Utilizing derived angles to analyze unknown molecular structures and chemical characteristics.
+3. **Absorption of Deviations:** Minute numerical fluctuations, traditionally treated as "noise," are interpreted as local spatial curvatures, achieving high-precision geometric projection.
+
+---
+
+## 物理モデルの基幹 / Core Physical Model
+
+### (JP)
+本アルゴリズムは、以下の幾何学的レンズを用いて結合角度（$\theta$）を算出します。
+
+$$\cos \theta = \frac{S}{S - 1}$$
+
+ここで、$S$ は系全体の混成状態（標高）を示し、システムが緩和して底（$S \to 0$）に近づくほど、角度は幾何学的必然として90°へ収束します。
+
+### (EN)
+The algorithm calculates the bond angle ($\theta$) through the following geometric lens:
+
+$$\cos \theta = \frac{S}{S - 1}$$
+
+Where $S$ represents the hybridization state (elevation) of the system. As the system relaxes toward the basin ($S \to 0$), the angle geometrically and inevitably converges to 90°.
+
+---
+
+## AIの利用について / Use of AI
+
+### (JP)
+本プロジェクトの核となる理論および幾何学的解釈は、人間（著者）独自の洞察によるものです。AIは、データの統計処理、計算の自動化、およびプログラムコードの最適化のための補助ツールとして活用されています。
+
+### (EN)
+The core theory and geometric interpretations of this project are based on the original insights of the human author. AI is utilized as a supplementary tool for statistical data processing, computational automation, and program code optimization.
