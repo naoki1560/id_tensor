@@ -2,9 +2,7 @@
 
 ![Python](https://img.shields.io/badge/Python-3.8%2B-blue)
 ![License](https://img.shields.io/badge/License-MIT-green)
-![DOI](https://img.shields.io/badge/DOI-10.5281/zenodo.18223828-blue)
 
-[ORCID: 0009-0002-0823-6109](https://orcid.org/0009-0002-0823-6109)
 * **[`id_tensor.py`](id_tensor.py)**
 * **[`PAPER.md`](PAPER.md)**
 
